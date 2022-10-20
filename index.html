@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gradiente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container-fluid text-center" style="min-height: 100vh; background-color: #fceecf;">
+        <div class="col-md-10 col-lg-7 mx-auto">
+
+        
+        <!-- Escolhendo as cores para fazer o gradiente -->
+        <h1 class="pt-5 mb-3">Escolha suas cores:</h1>
+        <div class="d-flex justify-content-around align-items-center flex-wrap" id="inputColors">
+            <div class="text-center">
+                <h1 class="fs-2" id="hexColor1"></h1>
+                <input type="color" class="btn rounded p-0" style="height: 150px; width: 150px; overflow: hidden;"
+                    id="inputColor1">
+            </div>
+            <h1 class="display-1 pt-4 plus-sign">+</h1>
+            <div class="text-center">
+                <h1 class="fs-2" id="hexColor2"></h1>
+                <input type="color" class="btn rounded p-0" style="height: 150px; width: 150px; overflow: hidden;"
+                    id="inputColor2">
+            </div>
+            <h1 class="display-1 pt-4 plus-sign col-12 col-sm-1" id="plusSign2" hidden>+</h1>
+            <div class="text-center" id="color3" hidden>
+                <h1 class="fs-2" id="hexColor3"></h1>
+                <input type="color" class="btn rounded p-0" style="height: 150px; width: 150px; overflow: hidden;"
+                    id="inputColor3">
+            </div>
+            <h1 class="display-1 pt-4 plus-sign" id="plusSign3" hidden>+</h1>
+            <div class="text-center" id="color4" hidden>
+                <h1 class="fs-2" id="hexColor4"></h1>
+                <input type="color" class="btn rounded p-0" style="height: 150px; width: 150px; overflow: hidden;"
+                    id="inputColor4">
+            </div>
+        </div>
+        <!-- Seção de botões -->
+        <div class="my-5">
+            <button class="btn btn-secondary mt-2" id="btnAddCor">Adicionar cor</button>
+            <button class="btn btn-secondary mt-2 mx-1" id="btnRmvCor" disabled>Remover cor</button>
+            <button class="btn btn-secondary mt-2" id="btnCorFinal">Adicionar cor final</button>
+        </div>
+        <!-- Escolhendo a cor final -->
+        <div id="corFinal" hidden> <!-- isso aqui tem q ser hidden --> 
+            <h1 class="mb-3">Escolha a cor que você quer:</h1>
+            <div class="d-flex justify-content-around align-items-center">
+                <div class="text-center">
+                    <h1 class="fs-2" id="hexColor0"></h1>
+                    <input type="color" class="btn rounded p-0" style="height: 150px; width: 150px; overflow: hidden;"
+                        id="inputColor0">
+                    <h1 class="fs-4 mt-2">Cor Final</h1>
+                </div>
+                <div>
+                    <h1 class="fs-5">% das cores:</h1>
+                    <h1 class="fs-4" id="perc"></h1>
+                    <h1 class="fs-5">Erro:</h1>
+                    <h1 class="fs-4" id="error"></h1>
+                </div>
+                <div>
+                    <h1 class="fs-2" id="hexBestColor"></h1>
+                    <div class="rounded" style="height: 150px; width: 150px;" id="bestColor"></div>
+                    <h1 class="fs-4 mt-2">Mais Próximo</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Gerando o gradiente -->
+        <h1 class="mt-5">Gradiente:</h1>
+        <div class="" style="height: 150px;" id="gradient"></div>
+        <!-- Legenda do gradiente -->
+        <div class="mt-1 d-flex justify-content-between">
+            <h1 class="fs-6">100%</h1>
+            <h1 class="fs-6">90%</h1>
+            <h1 class="fs-6">80%</h1>
+            <h1 class="fs-6">70%</h1>
+            <h1 class="fs-6">60%</h1>
+            <h1 class="fs-6">50%</h1>
+            <h1 class="fs-6">40%</h1>
+            <h1 class="fs-6">30%</h1>
+            <h1 class="fs-6">20%</h1>
+            <h1 class="fs-6">10%</h1>
+            <h1 class="fs-6">0%</h1>
+        </div>
+        <h1 class="fs-6 mt-3 pb-3" id="legendaGradiente">% da primeira cor com a segunda cor</h1>
+        </div>
+    </div>
+
+
+
+        <script src="./js/colors.js"></script>
+        <script src="./js/bestCombination.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
